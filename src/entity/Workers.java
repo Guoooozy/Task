@@ -7,8 +7,8 @@ public class Workers {
     private String name;
     private String password;
     private String sex;
-    private Date birthday;
-    private Date hire_date;
+    private String birthday;
+    private String hire_date;
     private String position;
     private String qualification;
     private String experience;
@@ -39,19 +39,19 @@ public class Workers {
         this.sex = sex;
     }
 
-    public Date getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
+    public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
 
-    public Date getHire_date() {
+    public String getHire_date() {
         return hire_date;
     }
 
-    public void setHire_date(Date hire_date) {
+    public void setHire_date(String hire_date) {
         this.hire_date = hire_date;
     }
 
@@ -95,7 +95,7 @@ public class Workers {
         this.super_id = super_id;
     }
 
-    public Workers(String name, String password, String sex, Date birthday, Date hire_date, String position, String qualification, String experience, String flag, String super_id) {
+    public Workers(String name, String password, String sex, String birthday, String hire_date, String position, String qualification, String experience, String flag, String super_id) {
         this.name = name;
         this.password = password;
         this.sex = sex;

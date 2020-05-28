@@ -21,9 +21,6 @@ public class LoginServlet extends HttpServlet {
         username = req.getParameter("username");
         String password = req.getParameter("password");
         String type = req.getParameter("type");
-        System.out.println(username);
-        System.out.println(password);
-        System.out.println(type);
         Object object = loginService.login(username,password,type);
         if(object != null){
             HttpSession session = req.getSession();
@@ -36,7 +33,7 @@ public class LoginServlet extends HttpServlet {
                 case "1":
                     Workers admin = (Workers) object;
                     session.setAttribute("admin",admin);
-                    resp.sendRedirect("/Admin");
+                    resp.sendRedirect("Admin.jsp");
                     break;
                 case "2":
                     Workers manager = (Workers) object;
