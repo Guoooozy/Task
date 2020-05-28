@@ -4,6 +4,7 @@ package entity;
 import java.util.Date;
 
 public class Workers {
+    private String username;
     private String name;
     private String password;
     private String sex;
@@ -14,6 +15,31 @@ public class Workers {
     private String experience;
     private String flag;
     private String super_id;
+
+    @Override
+    public String toString() {
+        return "Workers{" +
+                "username='" + username + '\'' +
+                ", name='" + name + '\'' +
+                ", password='" + password + '\'' +
+                ", sex='" + sex + '\'' +
+                ", birthday='" + birthday + '\'' +
+                ", hire_date='" + hire_date + '\'' +
+                ", position='" + position + '\'' +
+                ", qualification='" + qualification + '\'' +
+                ", experience='" + experience + '\'' +
+                ", flag='" + flag + '\'' +
+                ", super_id='" + super_id + '\'' +
+                '}';
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
     public String getName() {
         return name;
@@ -95,7 +121,8 @@ public class Workers {
         this.super_id = super_id;
     }
 
-    public Workers(String name, String password, String sex, String birthday, String hire_date, String position, String qualification, String experience, String flag, String super_id) {
+    public Workers(String username, String name, String password, String sex, String birthday, String hire_date, String position, String qualification, String experience, String flag, String super_id) {
+        this.username = username;
         this.name = name;
         this.password = password;
         this.sex = sex;
