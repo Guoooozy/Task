@@ -12,7 +12,7 @@ import javax.servlet.http.HttpSession;
 import javax.swing.text.DocumentFilter;
 import javax.xml.crypto.dsig.spec.XPathType;
 import java.io.IOException;
-@WebFilter(urlPatterns = {"/controller/Admin/*","/Admin"})
+@WebFilter(urlPatterns = {"/AddWorker.jsp","/Admin.jsp"})
 public class AdminFilter implements Filter {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
@@ -21,7 +21,7 @@ public class AdminFilter implements Filter {
         HttpSession session = request.getSession();
         Workers admin = (Workers) session.getAttribute("admin");
         if(admin == null){
-            response.sendRedirect("login.jsp");
+            response.sendRedirect("Login.jsp");
         }else{
             filterChain.doFilter(request,response);
         }
