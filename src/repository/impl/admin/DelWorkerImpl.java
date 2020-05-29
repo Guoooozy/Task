@@ -13,7 +13,7 @@ public class DelWorkerImpl implements DelWorkerRepository {
     @Override
     public Boolean Del(String name) {
         Boolean boolea = null;
-        String sql = "delete * from worker where name = ?";
+        String sql = "delete * from workers where name = ?";
         try {
             Connection connection = new JDBC().getConn();
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
