@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebFilter(urlPatterns = {"/AddWorker.jsp","/Admin.jsp"})
+@WebFilter(urlPatterns = {"/AddWorker.jsp","/Admin.jsp","/AddWorker.jsp"})
 public class AdminFilter implements Filter {
     AdminService adminService = new AdminServiceImpl();
     @Override

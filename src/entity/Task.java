@@ -3,20 +3,20 @@ package entity;
 import java.util.Date;
 
 public class Task {
-    private Integer id;
+    private String id;
     private String task_name;
-    private Date task_begin_time;
-    private Date task_end_time;
+    private String task_begin_time;
+    private String task_end_time;
     private String task_description;
     private String task_state;
     private String staff_id;
     private String emp_id;
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -28,19 +28,19 @@ public class Task {
         this.task_name = task_name;
     }
 
-    public Date getTask_begin_time() {
+    public String getTask_begin_time() {
         return task_begin_time;
     }
 
-    public void setTask_begin_time(Date task_begin_time) {
+    public void setTask_begin_time(String task_begin_time) {
         this.task_begin_time = task_begin_time;
     }
 
-    public Date getTask_end_time() {
+    public String getTask_end_time() {
         return task_end_time;
     }
 
-    public void setTask_end_time(Date task_end_time) {
+    public void setTask_end_time(String task_end_time) {
         this.task_end_time = task_end_time;
     }
 
@@ -76,7 +76,7 @@ public class Task {
         this.emp_id = emp_id;
     }
 
-    public Task(Integer id, String task_name, Date task_begin_time, Date task_end_time, String task_description, String task_state, String staff_id, String emp_id) {
+    public Task(String id, String task_name, String task_begin_time, String task_end_time, String task_description, String task_state, String staff_id, String emp_id) {
         this.id = id;
         this.task_name = task_name;
         this.task_begin_time = task_begin_time;
@@ -86,4 +86,6 @@ public class Task {
         this.staff_id = staff_id;
         this.emp_id = emp_id;
     }
+
+
 }

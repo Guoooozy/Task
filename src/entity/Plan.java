@@ -3,21 +3,21 @@ package entity;
 import java.util.Date;
 
 public class Plan {
-    private Integer id;
+    private String id;
     private String paln_name;
     private String plan_state;
     private String feedback;
-    private Date plan_begin_date;
-    private Date plan_end_date;
+    private String plan_begin_date;
+    private String plan_end_date;
     private String plan_discription;
     private String plan_feedback;
-    private Integer task_id;
+    private String task_id;
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -45,19 +45,19 @@ public class Plan {
         this.feedback = feedback;
     }
 
-    public Date getPlan_begin_date() {
+    public String getPlan_begin_date() {
         return plan_begin_date;
     }
 
-    public void setPlan_begin_date(Date plan_begin_date) {
+    public void setPlan_begin_date(String plan_begin_date) {
         this.plan_begin_date = plan_begin_date;
     }
 
-    public Date getPlan_end_date() {
+    public String getPlan_end_date() {
         return plan_end_date;
     }
 
-    public void setPlan_end_date(Date plan_end_date) {
+    public void setPlan_end_date(String plan_end_date) {
         this.plan_end_date = plan_end_date;
     }
 
@@ -77,15 +77,15 @@ public class Plan {
         this.plan_feedback = plan_feedback;
     }
 
-    public Integer getTask_id() {
+    public String getTask_id() {
         return task_id;
     }
 
-    public void setTask_id(Integer task_id) {
+    public void setTask_id(String task_id) {
         this.task_id = task_id;
     }
 
-    public Plan(Integer id, String paln_name, String plan_state, String feedback, Date plan_begin_date, Date plan_end_date, String plan_discription, String plan_feedback, Integer task_id) {
+    public Plan(String id, String paln_name, String plan_state, String feedback, String plan_begin_date, String plan_end_date, String plan_discription, String plan_feedback, String task_id) {
         this.id = id;
         this.paln_name = paln_name;
         this.plan_state = plan_state;
