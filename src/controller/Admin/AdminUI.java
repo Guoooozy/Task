@@ -17,7 +17,7 @@ public class AdminUI extends HttpServlet {
                 resp.sendRedirect("AddWorker.jsp");
                 break;
             case "del":
-                resp.sendRedirect("");
+                resp.sendRedirect("DelWorker.jsp");
                 break;
             case "change":
                 resp.sendRedirect("");
