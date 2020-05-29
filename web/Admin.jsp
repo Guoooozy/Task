@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Administrator
@@ -19,5 +20,37 @@
     <input type="submit" value="提交"/>
     <input type="Reset" value="重置"/>
 </form>
+<table width="95%" cellspacing="10">
+    <tr align="center">
+        <td>username</td>
+        <td>name</td>
+        <td>password</td>
+        <td>sex</td>
+        <td>birthday</td>
+        <td>hire_date</td>
+        <td>position</td>
+        <td>qualification</td>
+        <td>experience</td>
+        <td>flag</td>
+        <td>super_id</td>
+    </tr>
+
+    <c:forEach var="s" items="${list}">
+    <tr align="center">
+        <td>${s.username}</td>
+        <td>${s.name}</td>
+        <td>${s.password}</td>
+        <td>${s.sex}</td>
+        <td>${s.birthday}</td>
+        <td>${s.hire_date}</td>
+        <td>${s.position}</td>
+        <td>${s.qualification}</td>
+        <td>${s.experience}</td>
+        <td>${s.flag}</td>
+        <td>${s.super_id}</td>
+        <td><a href="change?name=${s.name}">更改</a></td>
+        <td><a href="DelWorker?name=${s.name}">删除</a></td>
+    </tr>
+    </c:forEach>
 </body>
 </html>

@@ -1,20 +1,17 @@
-package repository.impl.admin;
+package repository.impl;
 
 import entity.Workers;
-import javafx.beans.property.StringProperty;
-import repository.AddWorkerRepository;
+import repository.AdminRepository;
 import utils.JDBC;
 
-import javax.naming.Name;
-import javax.servlet.jsp.tagext.TryCatchFinally;
-import java.nio.channels.WritePendingException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
-public class AddWorkerImpl implements AddWorkerRepository {
-    @Override
+public class AdminRepositoryImpl implements AdminRepository {
     public Workers add(Workers workers) throws SQLException {
         int ret = 10;
         String s = new String();
@@ -68,5 +65,44 @@ public class AddWorkerImpl implements AddWorkerRepository {
             e.printStackTrace();
         }
         return workers;
+    }
+
+    public Boolean Del(String name) {
+        Boolean boolea = null;
+        String sql = "delete from workers where name = ?";
+        try {
+            Connection connection = new JDBC().getConn();
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1,name);
+            int i= preparedStatement.executeUpdate();
+            if(i<=0){
+                boolea = false;
+            }else{
+                boolea = true;
+            }
+            preparedStatement.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return boolea;
+    }
+
+    public List<Workers> find() {
+        String sql = "select * from workers";
+        List<Workers> list= new ArrayList<>();
+        Workers workers = null;
+        try {
+            Connection connection = new JDBC().getConn();
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()){
+                workers = new Workers(resultSet.getString(1),resultSet.getString(2),resultSet.getString(3),resultSet.getString(4),resultSet.getString(5),resultSet.getString(6),resultSet.getString(7),resultSet.getString(8),resultSet.getString(9),resultSet.getString(10),resultSet.getString(11));
+                list.add(workers);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return list;
     }
 }

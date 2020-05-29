@@ -2,6 +2,8 @@ package filter;
 
 import com.sun.net.httpserver.HttpExchange;
 import entity.Workers;
+import service.AdminService;
+import service.impl.AdminServiceImpl;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
@@ -12,8 +14,12 @@ import javax.servlet.http.HttpSession;
 import javax.swing.text.DocumentFilter;
 import javax.xml.crypto.dsig.spec.XPathType;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 @WebFilter(urlPatterns = {"/AddWorker.jsp","/Admin.jsp"})
 public class AdminFilter implements Filter {
+    AdminService adminService = new AdminServiceImpl();
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         HttpServletRequest request = (HttpServletRequest) servletRequest;
@@ -23,6 +29,9 @@ public class AdminFilter implements Filter {
         if(admin == null){
             response.sendRedirect("Login.jsp");
         }else{
+            List<Workers> list = new ArrayList<>();
+            list = adminService.FindAll();
+            request.setAttribute("list",list);
             filterChain.doFilter(request,response);
         }
     }
