@@ -11,11 +11,7 @@
   <head>
     <title>Task management system</title>
   </head>
-  <body class="loginpage">
-    <div class="top">
-      <p>选择登录方式</p>
-      <p>LOG ON TO WAY</p>
-    </div>
-
+  <body>
+    <a href="Login.jsp">登录</a>
   </body>
 </html>

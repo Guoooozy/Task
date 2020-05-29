@@ -1,6 +1,7 @@
 package repository.impl;
 
 import com.mysql.cj.jdbc.JdbcConnection;
+import entity.Plan;
 import entity.Workers;
 import repository.WorkersRepository;
 import utils.JDBC;
@@ -10,6 +11,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class WorkersRepositoryImpl implements WorkersRepository {
     @Override

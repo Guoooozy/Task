@@ -33,7 +33,7 @@ public class LoginServlet extends HttpServlet {
                 case "3":
                     Workers worker = (Workers) object;
                     session.setAttribute("worker",worker);
-                    resp.sendRedirect("Worker.jsp");
+                    resp.sendRedirect("Plan.jsp");
                     break;
                 case "1":
                     Workers admin = (Workers) object;

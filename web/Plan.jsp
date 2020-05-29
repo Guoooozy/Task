@@ -1,0 +1,48 @@
+<%@ page import="java.util.List" %><%--
+  Created by IntelliJ IDEA.
+  User: Administrator
+  Date: 2020/5/29
+  Time: 22:24
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>Plan</title>
+</head>
+<body>
+    <a href="AddPlan.jsp">制定计划</a><br>
+    <a href="FindPlan.jsp">查询计划</a><br>
+
+    <table width="95%" cellspacing="10">
+        <tr align="center">
+            <td>id</td>
+            <td>plan_name</td>
+            <td>plan_state</td>
+            <td>feedback</td>
+            <td>plan_begin_date</td>
+            <td>plan_end_date</td>
+            <td>plan_discription</td>
+            <td>plan_feedback</td>
+            <td>task_id</td>
+        </tr>
+
+
+        <c:forEach var="s" items="${list}">
+            <tr align="center">
+                <td>${s.id}</td>
+                <td>${s.plan_name}</td>
+                <td>${s.plan_state}</td>
+                <td>${s.feedback}</td>
+                <td>${s.plan_begin_date}</td>
+                <td>${s.plan_end_date}</td>
+                <td>${s.plan_discription}</td>
+                <td>${s.plan_feedback}</td>
+                <td>${s.task_id}</td>
+                <td><a href="changePlan?plan_name=${s.plan_name}&type=change">更改</a></td>
+                <td><a href="changePlan?plan_name=${s.plan_name}&type=del">删除</a></td>
+            </tr>
+        </c:forEach>
+    </table>
+</body>
+</html>

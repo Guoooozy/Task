@@ -26,7 +26,6 @@ public class AdminUI extends HttpServlet {
             case "del":
                 break;
             case "change":
-                resp.sendRedirect("");
                 break;
         }
 

@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Plan {
     private String id;
-    private String paln_name;
+    private String plan_name;
     private String plan_state;
     private String feedback;
     private String plan_begin_date;
@@ -12,6 +12,7 @@ public class Plan {
     private String plan_discription;
     private String plan_feedback;
     private String task_id;
+
 
     public String getId() {
         return id;
@@ -21,12 +22,12 @@ public class Plan {
         this.id = id;
     }
 
-    public String getPaln_name() {
-        return paln_name;
+    public String getPlan_name() {
+        return plan_name;
     }
 
-    public void setPaln_name(String paln_name) {
-        this.paln_name = paln_name;
+    public void setPlan_name(String plan_name) {
+        this.plan_name = plan_name;
     }
 
     public String getPlan_state() {
@@ -85,9 +86,9 @@ public class Plan {
         this.task_id = task_id;
     }
 
-    public Plan(String id, String paln_name, String plan_state, String feedback, String plan_begin_date, String plan_end_date, String plan_discription, String plan_feedback, String task_id) {
+    public Plan(String id, String plan_name, String plan_state, String feedback, String plan_begin_date, String plan_end_date, String plan_discription, String plan_feedback, String task_id) {
         this.id = id;
-        this.paln_name = paln_name;
+        this.plan_name = plan_name;
         this.plan_state = plan_state;
         this.feedback = feedback;
         this.plan_begin_date = plan_begin_date;

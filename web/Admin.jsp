@@ -50,5 +50,6 @@
         <td><a href="DelWorker?name=${s.name}&type=del">删除</a></td>
     </tr>
     </c:forEach>
+</table>
 </body>
 </html>

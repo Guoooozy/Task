@@ -19,18 +19,7 @@ public class AdminRepositoryImpl implements AdminRepository {
         try {
             String sql = "insert into workers (username,name,password,sex,birthday,hire_date,position,qualification,experience,flag,super_id) values (?,?,?,?,?,?,?,?,?,?,?)";
             Connection connection = new JDBC().getConn();
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);/*
-            preparedStatement.setString(1,workers.getName());
-            preparedStatement.setString(2,workers.getPassword());
-            preparedStatement.setString(3,workers.getSex());
-            preparedStatement.setString(4,workers.getBirthday());
-            preparedStatement.setString(5,workers.getHire_date());
-            preparedStatement.setString(6,workers.getPosition());
-            preparedStatement.setString(7,workers.getQualification());
-            preparedStatement.setString(8,workers.getExperience());
-            preparedStatement.setString(9,workers.getExperience());
-            preparedStatement.setString(10,workers.getFlag());
-            preparedStatement.setString(11,workers.getSuper_id());*/
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
             String username = workers.getUsername();
             String name = workers.getName();
