@@ -48,8 +48,8 @@
         <td>${s.experience}</td>
         <td>${s.flag}</td>
         <td>${s.super_id}</td>
-        <td><a href="change?name=${s.name}">更改</a></td>
-        <td><a href="DelWorker?name=${s.name}">删除</a></td>
+        <td><a href="DelWorker?name=${s.name}&type=change">更改</a></td>
+        <td><a href="DelWorker?name=${s.name}&type=del">删除</a></td>
     </tr>
     </c:forEach>
 </body>

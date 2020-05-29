@@ -30,4 +30,5 @@ public class AdminServiceImpl implements AdminService {
         list = adminRepository.find();
         return list;
     }
+
 }

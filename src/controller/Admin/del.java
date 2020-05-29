@@ -25,8 +25,16 @@ public class del extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
          String name = req.getParameter("name");
          Boolean bool = (Boolean) adminService.Del(name);
+         String type = req.getParameter("type");
          if(bool){
-             resp.sendRedirect("Admin.jsp");
+             switch (type){
+                 case "change":
+                     resp.sendRedirect("AddWorker.jsp");
+                     break;
+                 case "del":
+                     resp.sendRedirect("Admin.jsp");
+                     break;
+             }
          }else{
              resp.sendRedirect("Error.jsp");
          }
