@@ -34,4 +34,10 @@ public class WorkerServuceImpl implements WorkerService {
         return plan;
     }
 
+    @Override
+    public List<Plan> findByot(String plan_name, String plan_begin_date, String task_id, String feedback) {
+        List<Plan> list = new ArrayList<>();
+        list = planRepository.findByot(plan_name,plan_begin_date,task_id,feedback);
+        return list;
+    }
 }

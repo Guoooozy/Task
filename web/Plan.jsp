@@ -1,4 +1,6 @@
-<%@ page import="java.util.List" %><%--
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="java.util.List" %>
+<%--
   Created by IntelliJ IDEA.
   User: Administrator
   Date: 2020/5/29
@@ -28,7 +30,7 @@
         </tr>
 
 
-        <c:forEach var="s" items="${list}">
+        <c:forEach var="s" items="${planList}">
             <tr align="center">
                 <td>${s.id}</td>
                 <td>${s.plan_name}</td>

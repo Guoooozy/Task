@@ -26,9 +26,6 @@ public class WorkerFilter implements Filter {
         if(worker == null){
             response.sendRedirect("Login.jsp");
         }else{
-            List<Plan> list = new ArrayList<>();
-            list = workerService.findAll();
-            request.setAttribute("list",list);
             filterChain.doFilter(request,response);
         }
     }

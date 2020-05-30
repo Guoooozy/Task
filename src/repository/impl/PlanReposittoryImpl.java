@@ -83,4 +83,27 @@ public class PlanReposittoryImpl implements PlanRepository {
         }
         return plan;
     }
+
+    @Override
+    public List<Plan> findByot(String plan_name, String plan_begin_date, String task_id, String feedback) {
+        List<Plan> list = new ArrayList<>();
+        String sql = "select * from Plan where paln_name = ? and plan_begin_date = ? and task_id = ? and feedback = ?";
+        Connection connection = new JDBC().getConn();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1,plan_name);
+            preparedStatement.setString(2,plan_begin_date);
+            preparedStatement.setString(3,task_id);
+            preparedStatement.setString(4,feedback);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()){
+                list.add(new Plan(resultSet.getString(1),resultSet.getString(2),resultSet.getString(3),resultSet.getString(4),resultSet.getString(5),resultSet.getString(6),resultSet.getString(7),resultSet.getString(8),resultSet.getString(9)));
+            }
+            preparedStatement.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return list;
+    }
 }

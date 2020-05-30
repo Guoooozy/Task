@@ -1,10 +1,13 @@
 package controller;
 
+import entity.Plan;
 import entity.Workers;
 import service.AdminService;
 import service.LoginService;
+import service.WorkerService;
 import service.impl.AdminServiceImpl;
 import service.impl.LoginServiceImpl;
+import service.impl.WorkerServuceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,6 +23,7 @@ import java.util.List;
 public class LoginServlet extends HttpServlet {
     private LoginService loginService = new LoginServiceImpl();
     private AdminService adminService = new AdminServiceImpl();
+    private WorkerService workerService = new WorkerServuceImpl();
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String username;
@@ -33,18 +37,17 @@ public class LoginServlet extends HttpServlet {
                 case "3":
                     Workers worker = (Workers) object;
                     session.setAttribute("worker",worker);
+                    List<Plan> planList = new ArrayList<>();
+                    planList = workerService.findAll();
+                    session.setAttribute("planList",planList);
                     resp.sendRedirect("Plan.jsp");
                     break;
                 case "1":
                     Workers admin = (Workers) object;
                     session.setAttribute("admin",admin);
-                    /*
-                    List<Workers> list = new ArrayList<>();
-                    list = adminService.FindAll();
-                    req.setAttribute("list",list);
-                    req.getRequestDispatcher("Admin.jsp").forward(req,resp);
-
-                     */
+                    List<Workers> workersList = new ArrayList<>();
+                    workersList = adminService.FindAll();
+                    req.setAttribute("list",workersList);
                     resp.sendRedirect("Admin.jsp");
                     break;
                 case "2":
