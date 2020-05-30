@@ -1,5 +1,6 @@
 package controller.Worker;
 
+import com.mysql.cj.jdbc.ha.ReplicationMySQLConnection;
 import service.WorkerService;
 import service.impl.WorkerServuceImpl;
 
@@ -26,6 +27,7 @@ public class changePlan extends HttpServlet {
         switch (type){
             case "del":
                 workerService.delPlan(plan_name);
+                resp.sendRedirect("Plan.jsp");
                 break;
             case "change":
                 req.getRequestDispatcher("FeedPlan.jsp").forward(req,resp);

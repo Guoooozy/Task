@@ -40,4 +40,9 @@ public class WorkerServuceImpl implements WorkerService {
         list = planRepository.findByot(plan_name,plan_begin_date,task_id,feedback);
         return list;
     }
+
+    @Override
+    public void update(String plan_feedback,String plan_name) {
+        planRepository.update(plan_feedback,plan_name);
+    }
 }
