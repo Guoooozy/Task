@@ -20,5 +20,7 @@
         <input type="submit" value="提交" />
         <input type="Reset" value="重置">
     </form>
+    <%@ include file="footer.jsp" %>
 </body>
+
 </html>

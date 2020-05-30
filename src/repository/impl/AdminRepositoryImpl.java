@@ -45,7 +45,6 @@ public class AdminRepositoryImpl implements AdminRepository {
             preparedStatement.setString(10,flag);
             preparedStatement.setString(11,super_id);
             ret = preparedStatement.executeUpdate();
-            System.out.println(ret);
             if(ret<=0){
                 workers = null;
             }

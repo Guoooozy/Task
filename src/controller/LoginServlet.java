@@ -1,12 +1,15 @@
 package controller;
 
 import entity.Plan;
+import entity.Task;
 import entity.Workers;
 import service.AdminService;
 import service.LoginService;
+import service.ManagerService;
 import service.WorkerService;
 import service.impl.AdminServiceImpl;
 import service.impl.LoginServiceImpl;
+import service.impl.ManagerServiceImpl;
 import service.impl.WorkerServuceImpl;
 
 import javax.servlet.ServletException;
@@ -24,12 +27,14 @@ public class LoginServlet extends HttpServlet {
     private LoginService loginService = new LoginServiceImpl();
     private AdminService adminService = new AdminServiceImpl();
     private WorkerService workerService = new WorkerServuceImpl();
+    private ManagerService managerService = new ManagerServiceImpl();
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String username;
         username = req.getParameter("username");
         String password = req.getParameter("password");
         String type = req.getParameter("type");
+
         Object object = loginService.login(username,password,type);
         if(object != null){
             HttpSession session = req.getSession();
@@ -53,6 +58,10 @@ public class LoginServlet extends HttpServlet {
                 case "2":
                     Workers manager = (Workers) object;
                     session.setAttribute("manager",manager);
+                    List<Task> taskList = managerService.showTask(manager.getUsername());
+                    List<Workers> PartWorkers = managerService.showPartWorkers(manager.getUsername());
+                    session.setAttribute("taskList",taskList);
+                    session.setAttribute("PartWorkers",PartWorkers);
                     resp.sendRedirect("Manger.jsp");
                     break;
             }
