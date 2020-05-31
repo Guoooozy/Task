@@ -52,7 +52,7 @@ public class LoginServlet extends HttpServlet {
                     session.setAttribute("admin",admin);
                     List<Workers> workersList = new ArrayList<>();
                     workersList = adminService.FindAll();
-                    req.setAttribute("list",workersList);
+                    session.setAttribute("list",workersList);
                     resp.sendRedirect("Admin.jsp");
                     break;
                 case "2":

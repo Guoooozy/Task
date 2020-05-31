@@ -33,7 +33,7 @@
         <td>super_id</td>
     </tr>
 
-    <c:forEach var="s" items="${workersList}">
+    <c:forEach var="s" items="${list}">
     <tr align="center">
         <td>${s.username}</td>
         <td>${s.name}</td>
