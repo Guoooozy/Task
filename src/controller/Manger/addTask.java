@@ -22,6 +22,6 @@ public class addTask extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Task task = new Task(req.getParameter("id"),req.getParameter("task_name"),req.getParameter("task_begin_time"),req.getParameter("task_end_time"),req.getParameter("task_description"),req.getParameter("task_state"),req.getParameter("staff_id"),req.getParameter("emp_id"));
         managerService.addManger(task);
-        resp.sendRedirect("Manager.jsp");
+        resp.sendRedirect("Manger.jsp");
     }
 }

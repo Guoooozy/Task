@@ -50,18 +50,11 @@ public class LoginServlet extends HttpServlet {
                 case "1":
                     Workers admin = (Workers) object;
                     session.setAttribute("admin",admin);
-                    List<Workers> workersList = new ArrayList<>();
-                    workersList = adminService.FindAll();
-                    session.setAttribute("list",workersList);
                     resp.sendRedirect("Admin.jsp");
                     break;
                 case "2":
                     Workers manager = (Workers) object;
                     session.setAttribute("manager",manager);
-                    List<Task> taskList = managerService.showTask(manager.getUsername());
-                    List<Workers> PartWorkers = managerService.showPartWorkers(manager.getUsername());
-                    session.setAttribute("taskList",taskList);
-                    session.setAttribute("PartWorkers",PartWorkers);
                     resp.sendRedirect("Manger.jsp");
                     break;
             }

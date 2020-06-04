@@ -19,6 +19,7 @@ import java.util.List;
 
 @WebFilter(urlPatterns = {"/AddWorker.jsp","/Admin.jsp"})
 public class AdminFilter implements Filter {
+    AdminService adminService = new AdminServiceImpl();
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         HttpServletRequest request = (HttpServletRequest) servletRequest;
@@ -28,6 +29,9 @@ public class AdminFilter implements Filter {
         if(admin == null){
             response.sendRedirect("Login.jsp");
         }else{
+            List<Workers> workersList = new ArrayList<>();
+            workersList = adminService.FindAll();
+            session.setAttribute("list",workersList);
             filterChain.doFilter(request,response);
         }
     }

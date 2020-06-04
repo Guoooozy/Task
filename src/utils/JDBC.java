@@ -7,9 +7,9 @@ import java.sql.SQLException;
 public class JDBC {
     public Connection getConn() {
         String driver = "com.mysql.cj.jdbc.Driver";
-        String url = "jdbc:mysql://49.234.72.114:3306/Task?&useSSL=false&serverTimezone=UTC";
+        String url = "jdbc:mysql://localhost/Task?&useSSL=false&serverTimezone=UTC";
         String username = "root";
-        String password = "gzy112480..";
+        String password = "123456";
         Connection conn = null;
         try {
             Class.forName(driver); //classLoader,加载对应驱动
