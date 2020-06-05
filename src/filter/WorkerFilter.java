@@ -2,7 +2,10 @@ package filter;
 
 import entity.Plan;
 import entity.Workers;
+import javafx.concurrent.Worker;
+import service.ManagerService;
 import service.WorkerService;
+import service.impl.ManagerServiceImpl;
 import service.impl.WorkerServuceImpl;
 
 import javax.servlet.*;
@@ -16,7 +19,7 @@ import java.util.List;
 
 @WebFilter(urlPatterns = {"/Plan.jsp","/AddPlan.jsp","/FeedPlan.jsp","/FindPlan.jsp"})
 public class WorkerFilter implements Filter {
-    private WorkerService workerService =new WorkerServuceImpl();
+    private WorkerService workerService = new WorkerServuceImpl();
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         HttpServletRequest request = (HttpServletRequest) servletRequest;
@@ -26,6 +29,9 @@ public class WorkerFilter implements Filter {
         if(worker == null){
             response.sendRedirect("Login.jsp");
         }else{
+            List<Plan> planList = new ArrayList<>();
+            planList = workerService.findAll();
+            session.setAttribute("planList",planList);
             filterChain.doFilter(request,response);
         }
     }
