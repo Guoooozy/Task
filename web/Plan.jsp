@@ -41,7 +41,7 @@
                 <td>${s.plan_discription}</td>
                 <td>${s.plan_feedback}</td>
                 <td>${s.task_id}</td>
-                <td><a href="changePlan?plan_name=${s.plan_name}&type=change">更改</a></td>
+                <td><a href="changePlan?plan_name=${s.plan_name}&type=change">更新反馈信息</a></td>
                 <td><a href="changePlan?plan_name=${s.plan_name}&type=del">删除</a></td>
             </tr>
         </c:forEach>

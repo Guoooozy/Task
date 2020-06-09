@@ -7,4 +7,5 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <p>感谢使用管理系统</p><br>
+<a href="Footer">首页</a>
 <a href="Logout">注销</a>

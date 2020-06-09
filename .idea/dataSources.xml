@@ -7,5 +7,11 @@
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://49.234.72.114:3306/Task</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="Task@localhost" uuid="59f12b07-cdad-48ee-b40e-b218cd3daf05">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/Task</jdbc-url>
+    </data-source>
   </component>
 </project>

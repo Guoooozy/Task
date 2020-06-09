@@ -22,7 +22,7 @@
     <input type="Reset" value="重置"/>
     以下是查询结果：
 </form>
-    <table>
+    <table width="95%" cellspacing="10">
         <tr align="center">
             <td>id</td>
             <td>plan_name</td>

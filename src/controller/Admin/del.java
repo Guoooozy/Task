@@ -27,14 +27,7 @@ public class del extends HttpServlet {
          Boolean bool = (Boolean) adminService.Del(name);
          String type = req.getParameter("type");
          if(bool){
-             switch (type){
-                 case "change":
-                     resp.sendRedirect("AddWorker.jsp");
-                     break;
-                 case "del":
-                     resp.sendRedirect("Admin.jsp");
-                     break;
-             }
+             resp.sendRedirect("Admin.jsp");
          }else{
              resp.sendRedirect("Error.jsp");
          }

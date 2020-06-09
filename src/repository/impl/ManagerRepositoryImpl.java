@@ -66,7 +66,7 @@ public class ManagerRepositoryImpl implements ManagerRepository {
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1,task_name);
-            preparedStatement.executeUpdate();
+            int i = preparedStatement.executeUpdate();
             preparedStatement.close();
             connection.close();
         } catch (SQLException e) {

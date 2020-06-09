@@ -46,8 +46,8 @@
         <td>${s.experience}</td>
         <td>${s.flag}</td>
         <td>${s.super_id}</td>
-        <td><a href="DelWorker?name=${s.name}&type=change">更改</a></td>
-        <td><a href="DelWorker?name=${s.name}&type=del">删除</a></td>
+        <td><a href="ChangeWorker.jsp?username=${s.username}&name=${s.name}&password=${s.password}&sex=${s.sex}&birthday=${s.birthday}&hire_date=${s.hire_date}&position=${s.position}&qualification=${s.qualification}&experience=${s.experience}&flag=${s.flag}&super_id=${s.super_id}">更改</a></td>
+        <td><a href="DelWorker?name=${s.name}">删除</a></td>
     </tr>
     </c:forEach>
 </table>

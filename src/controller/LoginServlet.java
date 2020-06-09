@@ -46,12 +46,12 @@ public class LoginServlet extends HttpServlet {
                     break;
                 case "1":
                     Workers admin = (Workers) object;
-                    session.setAttribute("admin",admin);
+                    session.setAttribute("worker",admin);
                     resp.sendRedirect("Admin.jsp");
                     break;
                 case "2":
                     Workers manager = (Workers) object;
-                    session.setAttribute("manager",manager);
+                    session.setAttribute("worker",manager);
                     resp.sendRedirect("Manger.jsp");
                     break;
             }
