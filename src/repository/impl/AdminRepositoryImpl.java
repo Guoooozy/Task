@@ -9,6 +9,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.Period;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -93,5 +94,31 @@ public class AdminRepositoryImpl implements AdminRepository {
             e.printStackTrace();
         }
         return list;
+    }
+
+    @Override
+    public Workers update(Workers workers) {
+        String sql = "update workers set name = ? and password = ? and sex = ? and birthday = ? and hire_date = ? and position = ? and qualification = ? and experience = ? and flag = ? and value = ? where username = ?";
+        Connection connection = new JDBC().getConn();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1,workers.getName());
+            preparedStatement.setString(2,workers.getPassword());
+            preparedStatement.setString(3,workers.getSex());
+            preparedStatement.setString(4,workers.getBirthday());
+            preparedStatement.setString(5,workers.getHire_date());
+            preparedStatement.setString(6,workers.getPosition());
+            preparedStatement.setString(7,workers.getQualification());
+            preparedStatement.setString(8,workers.getExperience());
+            preparedStatement.setString(9,workers.getFlag());
+            preparedStatement.setString(10,workers.getSuper_id());
+            preparedStatement.setString(11,workers.getUsername());
+            int i = preparedStatement.executeUpdate();
+            preparedStatement.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return workers;
     }
 }

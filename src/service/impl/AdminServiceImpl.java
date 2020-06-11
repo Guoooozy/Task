@@ -31,4 +31,11 @@ public class AdminServiceImpl implements AdminService {
         return list;
     }
 
+    @Override
+    public Object update(String username, String name, String password, String sex, String birthday, String hire_date, String position, String qualification, String experience, String flag, String super_id) throws SQLException {
+        Object object =null;
+        Workers workers = new Workers(username,name,password,sex,birthday,hire_date,position,qualification,experience,flag,super_id);
+        object = adminRepository.update(workers);
+        return object;
+    }
 }

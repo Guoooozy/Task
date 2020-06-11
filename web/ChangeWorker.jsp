@@ -13,7 +13,7 @@
 <body>
 <form action="changeworker" method="post">
     <p>输入人员的信息</p>
-    username:<input type="text" name="username" value="${param.username}"><br>
+    username:<input type="text" name="username" value="${param.username}" readonly="true"><br>
     name：<input type="text" name="name"  value="${param.name}"><br>
     password:<input type="text" name="password" value="${param.password}"><br>
     sex:<input type="text" name="sex" value="${param.sex}"><br>
