@@ -12,6 +12,7 @@
     <title>经理界面</title>
 </head>
 <body>
+<%@ include file="top.jsp" %>
 <a href="AddTask.jsp">制定任务</a><br>
 <a href="ShowTask.jsp">查看任务</a><br>
 <a href="ShowWorker.jsp">查看人员</a><br>

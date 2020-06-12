@@ -13,6 +13,7 @@
     <title>Plan</title>
 </head>
 <body>
+<%@ include file="top.jsp" %>
     <a href="AddPlan.jsp">制定计划</a><br>
     <a href="FindPlan.jsp">查询计划</a><br>
 

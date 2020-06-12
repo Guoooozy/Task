@@ -10,15 +10,12 @@
 <html>
 <head>
     <title>Admin</title>
+    <link rel="stylesheet" type="text/css" href="css/table.css" />
 </head>
+
 <body>
-<form action="Admin" method="post">
-    <p>选择你要使用的功能</p>
-    <input type="radio" name="type" value="add"/>添加人员<br>
-    <input type="submit" value="提交"/>
-    <input type="Reset" value="重置"/>
-</form>
-<table width="95%" cellspacing="10">
+<%@ include file="top.jsp" %>
+<table id="customers">
     <tr align="center">
         <td>username</td>
         <td>name</td>
@@ -34,7 +31,7 @@
     </tr>
 
     <c:forEach var="s" items="${list}">
-    <tr align="center">
+    <tr align="center" class="alt">
         <td>${s.username}</td>
         <td>${s.name}</td>
         <td>${s.password}</td>
@@ -51,6 +48,7 @@
     </tr>
     </c:forEach>
 </table>
+<a href="Admin?type=add">添加人员</a>
 <%@ include file="footer.jsp" %>
 </body>
 </html>

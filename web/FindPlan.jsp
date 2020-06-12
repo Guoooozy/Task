@@ -12,7 +12,7 @@
     <title>查询计划</title>
 </head>
 <body>
-
+<%@ include file="top.jsp" %>
 <form action="findPlan" method="post">
     plan_name:<input type="text" name="plan_name">
     plan_begin_date:<input type="text" name="plan_begin_date">

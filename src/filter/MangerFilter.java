@@ -14,7 +14,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
-@WebFilter(urlPatterns = {"/AddTask.jsp","/Manger.jsp","/ShowTask.jsp","/ShowWorkers.jsp"})
+//@WebFilter(urlPatterns = {"/AddTask.jsp","/Manger.jsp","/ShowTask.jsp","/ShowWorkers.jsp"})
 public class MangerFilter implements Filter {
     ManagerService managerService = new ManagerServiceImpl();
     @Override

@@ -11,6 +11,7 @@
     <title>反馈计划</title>
 </head>
 <body>
+<%@ include file="top.jsp" %>
 <form action="feedPlan" method="post">
     请输入你要填写的反馈信息：<input type="text" name="plan_feedback">
     <input type="submit" value="提交"/>

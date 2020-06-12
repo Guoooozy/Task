@@ -11,6 +11,7 @@
     <title>Addworker</title>
 </head>
 <body>
+<%@ include file="top.jsp" %>
     <form action="addwoker" method="post">
         <p>输入人员的信息</p>
         username:<input type="text" name="username"><br>

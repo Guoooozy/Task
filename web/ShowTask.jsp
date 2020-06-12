@@ -12,6 +12,7 @@
     <title>任务展示</title>
 </head>
 <body>
+<%@ include file="top.jsp" %>
 <table width="95%" cellspacing="10">
     <tr align="center">
         <td>id</td>

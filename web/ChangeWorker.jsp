@@ -11,6 +11,7 @@
     <title>更改人员信息</title>
 </head>
 <body>
+<%@ include file="top.jsp" %>
 <form action="changeworker" method="post">
     <p>输入人员的信息</p>
     username:<input type="text" name="username" value="${param.username}" readonly="true"><br>

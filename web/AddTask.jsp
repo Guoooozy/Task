@@ -11,6 +11,7 @@
     <title>添加任务</title>
 </head>
 <body>
+<%@ include file="top.jsp" %>
 <form action="addTask" method="post">
     id:<input type="text" name="id"><br>
     task_name:<input type="text" name="task_name"><br>

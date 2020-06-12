@@ -28,6 +28,12 @@ public class LoginServlet extends HttpServlet {
     private AdminService adminService = new AdminServiceImpl();
     private WorkerService workerService = new WorkerServuceImpl();
     private ManagerService managerService = new ManagerServiceImpl();
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        doPost(req,resp);
+    }
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String username;

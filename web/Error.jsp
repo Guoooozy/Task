@@ -12,6 +12,7 @@
     <title>Error</title>
 </head>
 <body>
+<%@ include file="top.jsp" %>
     <p>出现错误,3秒后自动跳转到登录界面</p>
 </body>
 </html>
