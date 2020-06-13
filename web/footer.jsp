@@ -9,5 +9,4 @@
 <head>
     <link rel="stylesheet" type="text/css" href="css/table.css"/>
 </head>
-<a href="Footer">首页</a>
-<a href="Logout">注销</a>
+

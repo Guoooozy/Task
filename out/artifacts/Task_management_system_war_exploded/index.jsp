@@ -12,6 +12,7 @@
     <title>Task management system</title>
   </head>
   <body>
+  <%@ include file="top.jsp" %>
     <a href="Login.jsp">登录</a>
   </body>
   <%@ include file="footer.jsp" %>
