@@ -9,25 +9,105 @@
 <html>
 <head>
     <title>更改人员信息</title>
+    <link rel="stylesheet" type="text/css" href="css/form.css" />
 </head>
 <body>
 <%@ include file="top.jsp" %>
-<form action="changeworker" method="post">
-    <p>输入人员的信息</p>
-    username:<input type="text" name="username" value="${param.username}" readonly="true"><br>
-    name：<input type="text" name="name"  value="${param.name}"><br>
-    password:<input type="text" name="password" value="${param.password}"><br>
-    sex:<input type="text" name="sex" value="${param.sex}"><br>
-    birthday:<input type="text" name="birthday" value="${param.birthday}"><br>
-    hire_date:<input type="text" name="hire_date" value="${param.hire_date}"><br>
-    position:<input type="text" name="position" value="${param.position}"><br>
-    qualification:<input type="text" name="qualification" value="${param.qualification}"><br>
-    experience:<input type="text" name="experience" value="${param.experience}"><br>
-    flag:<input type="text" name="flag" value="${param.flag}"><br>
-    super_id:<input type="text" name="super_id" value="${param.super_id}"><br>
-    <input type="submit" value="提交"/>
-    <input type="Reset" value="重置"/>
-</form>
+<div class="container">
+    <form action="addwoker" method="post">
+        <div class="row">
+            <div class="col-25">
+                <label for="username">username</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="username" name="username" placeholder="${param.username}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="name">name</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="name" name="name" placeholder="${param.name}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="password">password</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="password" name="password" placeholder="${param.password}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="sex">sex</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="sex" name="sex" placeholder="${param.sex}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="birthday">birthday</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="birthday" name="birthday" placeholder="${param.birthday}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="hire_date">hire_date</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="hire_date" name="hire_date" placeholder="${param.hire_date}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="position">position</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="position" name="position" placeholder="${param.position}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="qualification">qualification</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="qualification" name="qualification" placeholder="${param.qualification}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="experience">experience</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="experience" name="experience" placeholder="${param.experience}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="flag">flag</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="flag" name="flag" placeholder="${param.flag}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="super_id">super_id</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="super_id" name="super_id" placeholder="${param.super_id}">
+            </div>
+        </div>
+        <div class="row">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</div>
 <%@ include file="footer.jsp" %>
 </body>
 </html>

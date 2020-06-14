@@ -10,10 +10,11 @@
 <html>
 <head>
     <title>部门人员</title>
+    <link rel="stylesheet" type="text/css" href="css/table.css" />
 </head>
 <body>
 <%@ include file="top.jsp" %>
-<table width="95%" cellspacing="10">
+<table id="customers">
     <tr align="center">
         <td>username</td>
         <td>name</td>
@@ -29,7 +30,7 @@
     </tr>
 
     <c:forEach var="s" items="${PartWorkers}">
-        <tr align="center">
+        <tr align="center" class="alt">
             <td>${s.username}</td>
             <td>${s.name}</td>
             <td>${s.password}</td>

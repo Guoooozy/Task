@@ -10,10 +10,11 @@
 <html>
 <head>
     <title>任务展示</title>
+    <link rel="stylesheet" type="text/css" href="css/table.css" />
 </head>
 <body>
 <%@ include file="top.jsp" %>
-<table width="95%" cellspacing="10">
+<table id="customers">
     <tr align="center">
         <td>id</td>
         <td>task_name</td>
@@ -27,7 +28,7 @@
 
 
     <c:forEach var="s" items="${taskList}">
-    <tr align="center">
+    <tr align="center" class="alt">
         <td>${s.id}</td>
         <td>${s.task_name}</td>
         <td>${s.task_begin_time}</td>

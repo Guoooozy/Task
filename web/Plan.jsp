@@ -11,13 +11,14 @@
 <html>
 <head>
     <title>Plan</title>
+    <link rel="stylesheet" type="text/css" href="css/table.css" />
 </head>
 <body>
 <%@ include file="top.jsp" %>
     <a href="AddPlan.jsp">制定计划</a><br>
     <a href="FindPlan.jsp">查询计划</a><br>
 
-    <table width="95%" cellspacing="10">
+    <table id="customers">
         <tr align="center">
             <td>id</td>
             <td>plan_name</td>
@@ -32,7 +33,7 @@
 
 
         <c:forEach var="s" items="${planList}">
-            <tr align="center">
+            <tr align="center" class="alt">
                 <td>${s.id}</td>
                 <td>${s.plan_name}</td>
                 <td>${s.plan_state}</td>

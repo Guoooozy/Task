@@ -12,11 +12,21 @@
 </head>
 <body>
 <%@ include file="top.jsp" %>
-<form action="feedPlan" method="post">
-    请输入你要填写的反馈信息：<input type="text" name="plan_feedback">
-    <input type="submit" value="提交"/>
-    <input type="Reset" value="重置"/>
-</form>
+<div class="container">
+    <form action="feedPlan" method="post">
+        <div class="row">
+            <div class="col-25">
+                <label for="plan_feedback">plan_feedback</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="plan_feedback" name="plan_feedback" placeholder="plan_feedback">
+            </div>
+        </div>
+        <div class="row">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</div>
 <%@ include file="footer.jsp" %>
 </body>
 </html>

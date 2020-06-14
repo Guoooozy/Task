@@ -10,12 +10,23 @@
 <html>
 <head>
     <title>经理界面</title>
+    <link rel="stylesheet" type="text/css" href="css/form.css" />
 </head>
 <body>
 <%@ include file="top.jsp" %>
-<a href="AddTask.jsp">制定任务</a><br>
-<a href="ShowTask.jsp">查看任务</a><br>
-<a href="ShowWorker.jsp">查看人员</a><br>
+<div class="row">
+    <div style="height: 100px;width:20%;text-align: center;float: left"></div>
+    <div style="height: 100px;width:20%;text-align: center;float: left">
+        <a href="AddTask.jsp">制定任务</a>
+    </div>
+    <div style="height: 100px;width: 20%;text-align: center;float: left">
+    <a href="ShowTask.jsp">查看任务</a>
+    </div>
+    <div style="height: 100px;width: 20%;text-align: center;float: left">
+    <a href="ShowWorker.jsp">查看人员</a>
+    </div>
+    <div style="height: 100px;width:20%;text-align: center;float: left"></div>
+</div>
 </table>
 <%@ include file="footer.jsp" %>
 </body>
