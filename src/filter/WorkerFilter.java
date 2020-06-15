@@ -16,8 +16,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-//@WebFilter(urlPatterns = {"/Plan.jsp","/AddPlan.jsp","/FeedPlan.jsp","/FindPlan.jsp"})
+@WebFilter(urlPatterns = {"/Plan.jsp","/AddPlan.jsp","/FeedPlan.jsp","/FindPlan.jsp"})
 public class WorkerFilter implements Filter {
     private WorkerService workerService = new WorkerServuceImpl();
     @Override
