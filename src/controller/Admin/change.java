@@ -30,9 +30,9 @@ public class change extends HttpServlet {
         String flag = req.getParameter("flag");
         String super_id = req.getParameter("super_id");
         try {
-            Object object = adminService.add(username,name,password,sex,birthday,hire_date,position,qualification,experience,flag,super_id);
+            Object object = adminService.update(username,name,password,sex,birthday,hire_date,position,qualification,experience,flag,super_id);
             if(object!=null){
-                resp.sendRedirect("ChangeWorker.jsp");
+                resp.sendRedirect("Admin.jsp");
             }
         } catch (SQLException e) {
             e.printStackTrace();

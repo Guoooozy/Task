@@ -14,13 +14,13 @@
 <body>
 <%@ include file="top.jsp" %>
 <div class="container">
-    <form action="addwoker" method="post">
+    <form action="changeworker" method="post">
         <div class="row">
             <div class="col-25">
                 <label for="username">username</label>
             </div>
             <div class="col-75">
-                <input type="text" id="username" name="username" placeholder="${param.username}">
+                <input type="text" id="username" name="username" placeholder="${param.username}" value="${param.username}" readonly="true">
             </div>
         </div>
         <div class="row">
@@ -28,7 +28,7 @@
                 <label for="name">name</label>
             </div>
             <div class="col-75">
-                <input type="text" id="name" name="name" placeholder="${param.name}">
+                <input type="text" id="name" name="name" placeholder="${param.name}" value="${param.name}">
             </div>
         </div>
         <div class="row">
@@ -36,7 +36,7 @@
                 <label for="password">password</label>
             </div>
             <div class="col-75">
-                <input type="text" id="password" name="password" placeholder="${param.password}">
+                <input type="text" id="password" name="password" placeholder="${param.password}" value="${param.password}">
             </div>
         </div>
         <div class="row">
@@ -44,7 +44,7 @@
                 <label for="sex">sex</label>
             </div>
             <div class="col-75">
-                <input type="text" id="sex" name="sex" placeholder="${param.sex}">
+                <input type="text" id="sex" name="sex" placeholder="${param.sex}" value="${param.sex}">
             </div>
         </div>
         <div class="row">
@@ -52,7 +52,7 @@
                 <label for="birthday">birthday</label>
             </div>
             <div class="col-75">
-                <input type="text" id="birthday" name="birthday" placeholder="${param.birthday}">
+                <input type="text" id="birthday" name="birthday" placeholder="${param.birthday}" value="${param.birthday}">
             </div>
         </div>
         <div class="row">
@@ -60,7 +60,7 @@
                 <label for="hire_date">hire_date</label>
             </div>
             <div class="col-75">
-                <input type="text" id="hire_date" name="hire_date" placeholder="${param.hire_date}">
+                <input type="text" id="hire_date" name="hire_date" placeholder="${param.hire_date}" value="${param.hire_date}">
             </div>
         </div>
         <div class="row">
@@ -68,7 +68,7 @@
                 <label for="position">position</label>
             </div>
             <div class="col-75">
-                <input type="text" id="position" name="position" placeholder="${param.position}">
+                <input type="text" id="position" name="position" placeholder="${param.position}" value="${param.position}">
             </div>
         </div>
         <div class="row">
@@ -76,7 +76,7 @@
                 <label for="qualification">qualification</label>
             </div>
             <div class="col-75">
-                <input type="text" id="qualification" name="qualification" placeholder="${param.qualification}">
+                <input type="text" id="qualification" name="qualification" placeholder="${param.qualification}" value="${param.qualification}">
             </div>
         </div>
         <div class="row">
@@ -84,7 +84,7 @@
                 <label for="experience">experience</label>
             </div>
             <div class="col-75">
-                <input type="text" id="experience" name="experience" placeholder="${param.experience}">
+                <input type="text" id="experience" name="experience" placeholder="${param.experience}" value="${param.experience}">
             </div>
         </div>
         <div class="row">
@@ -92,7 +92,7 @@
                 <label for="flag">flag</label>
             </div>
             <div class="col-75">
-                <input type="text" id="flag" name="flag" placeholder="${param.flag}">
+                <input type="text" id="flag" name="flag" placeholder="${param.flag}" value="${param.flag}">
             </div>
         </div>
         <div class="row">
@@ -100,7 +100,7 @@
                 <label for="super_id">super_id</label>
             </div>
             <div class="col-75">
-                <input type="text" id="super_id" name="super_id" placeholder="${param.super_id}">
+                <input type="text" id="super_id" name="super_id" placeholder="${param.super_id}" value="${param.super_id}">
             </div>
         </div>
         <div class="row">

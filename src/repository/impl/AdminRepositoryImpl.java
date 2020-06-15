@@ -98,7 +98,7 @@ public class AdminRepositoryImpl implements AdminRepository {
 
     @Override
     public Workers update(Workers workers) {
-        String sql = "update workers set name = ? and password = ? and sex = ? and birthday = ? and hire_date = ? and position = ? and qualification = ? and experience = ? and flag = ? and value = ? where username = ?";
+        String sql = "update workers set name = ?,password = ?,sex = ?,birthday = ?,hire_date = ?,position = ?,qualification = ?, experience = ? ,flag = ? ,super_id = ? where username = ?";
         Connection connection = new JDBC().getConn();
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
