@@ -37,7 +37,7 @@
         <td>${s.task_state}</td>
         <td>${s.staff_id}</td>
         <td>${s.emp_id}</td>
-        <td><a href="changeTask?task_name=${s.task_name}">调整任务</a></td>
+        <td><a href="ChangeTask.jsp?task_name=${s.task_name}&id=${s.id}&task_begin_time=${s.task_begin_time}&task_end_time=${s.task_end_time}&task_description=${s.task_description}&task_state=${s.task_state}&staff_id=${s.staff_id}&emp_id=${s.emp_id}">调整任务</a></td>
     </tr>
     </c:forEach>
     <%@ include file="footer.jsp" %>

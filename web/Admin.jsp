@@ -48,7 +48,7 @@
     </tr>
     </c:forEach>
 </table>
-<a href="Admin?type=add">添加人员</a>
+<a href="AddWorker.jsp">添加人员</a>
 <%@ include file="footer.jsp" %>
 </body>
 </html>

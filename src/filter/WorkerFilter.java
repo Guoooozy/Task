@@ -25,7 +25,7 @@ public class WorkerFilter implements Filter {
         HttpServletResponse response = (HttpServletResponse) servletResponse;
         HttpSession session = request.getSession();
         Workers worker = (Workers)session.getAttribute("worker");
-        if(worker == null){
+        if(worker == null||!worker.getFlag().equals("3")){
             response.sendRedirect("Login.jsp");
         }else{
             List<Plan> planList = new ArrayList<>();

@@ -60,12 +60,19 @@ public class ManagerRepositoryImpl implements ManagerRepository {
     }
 
     @Override
-    public void delTask(String task_name) {
-        String sql = "delete * from Task where task_name = ?";
-        Connection connection =new JDBC().getConn();
+    public void update(Task task) {
+        String sql = "update task set  task_name = ? , task_begin_time = ? , task_end_time = ? , task_description = ? , task_state = ? , staff_id = ? , emp_id = ? where id = ?";
+        Connection connection = new JDBC().getConn();
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(1,task_name);
+            preparedStatement.setString(1,task.getTask_name());
+            preparedStatement.setString(2,task.getTask_begin_time());
+            preparedStatement.setString(3,task.getTask_end_time());
+            preparedStatement.setString(4,task.getTask_description());
+            preparedStatement.setString(5,task.getTask_state());
+            preparedStatement.setString(6,task.getStaff_id());
+            preparedStatement.setString(7,task.getEmp_id());
+            preparedStatement.setString(8,task.getId());
             int i = preparedStatement.executeUpdate();
             preparedStatement.close();
             connection.close();

@@ -26,7 +26,7 @@ public class AdminFilter implements Filter {
         HttpServletResponse response = (HttpServletResponse) servletResponse;
         HttpSession session = request.getSession();
         Workers admin = (Workers) session.getAttribute("worker");
-        if(admin == null){
+        if(admin == null||!admin.getFlag().equals("1")){
             response.sendRedirect("Login.jsp");
         }else{
             List<Workers> workersList = new ArrayList<>();

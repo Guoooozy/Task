@@ -23,7 +23,7 @@ public class MangerFilter implements Filter {
         HttpServletResponse response = (HttpServletResponse) servletResponse;
         HttpSession session = request.getSession();
         Workers manager = (Workers)session.getAttribute("worker");
-        if(manager == null){
+        if(manager == null||!manager.getFlag().equals("2")){
             response.sendRedirect("Login.jsp");
         }else{
             List<Task> taskList = managerService.showTask(manager.getUsername());

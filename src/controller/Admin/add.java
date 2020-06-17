@@ -16,6 +16,12 @@ import java.sql.SQLException;
 @WebServlet("/addwoker")
 public class add extends HttpServlet {
     private AdminService adminService= new AdminServiceImpl();
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        doPost(req,resp);
+    }
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String username = req.getParameter("username");

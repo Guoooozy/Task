@@ -25,8 +25,8 @@ public class ManagerServiceImpl implements ManagerService {
     }
 
     @Override
-    public void delTask(String task_name) {
-        managerRepository.delTask(task_name);
+    public void update(Task task) {
+        managerRepository.update(task);
     }
 
     @Override
