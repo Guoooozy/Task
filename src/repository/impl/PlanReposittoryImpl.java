@@ -39,7 +39,7 @@ public class PlanReposittoryImpl implements PlanRepository {
     @Override
     public List<Plan> findAll(String id) {
         List<Plan> list = new ArrayList<>();
-        String sql = "select * from Plan where id = ?";
+        String sql = "select * from Plan where task_id = ?";
         Connection connection = new JDBC().getConn();
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
