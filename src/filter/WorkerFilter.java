@@ -29,7 +29,7 @@ public class WorkerFilter implements Filter {
             response.sendRedirect("Login.jsp");
         }else{
             List<Plan> planList = new ArrayList<>();
-            planList = workerService.findAll();
+            planList = workerService.findAll(worker.getUsername());
             session.setAttribute("planList",planList);
             filterChain.doFilter(request,response);
         }

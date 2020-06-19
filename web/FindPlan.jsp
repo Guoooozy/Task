@@ -19,18 +19,18 @@
     <form action="findPlan" method="post">
         <div class="row">
             <div class="col-25">
-                <label for="paln_name">paln_name</label>
+                <label for="plan_name">plan_name</label>
             </div>
             <div class="col-75">
-                <input type="text" id="paln_name" name="paln_name" placeholder="paln_name">
+                <input type="text" id="plan_name" name="plan_name" placeholder="plan_name">
             </div>
         </div>
         <div class="row">
             <div class="col-25">
-                <label for="paln_begin_date">paln_begin_date</label>
+                <label for="plan_begin_date">plan_begin_date</label>
             </div>
             <div class="col-75">
-                <input type="text" id="paln_begin_date" name="paln_begin_date" placeholder="paln_begin_date">
+                <input type="text" id="plan_begin_date" name="plan_begin_date" placeholder="plan_begin_date">
             </div>
         </div>
         <div class="row">

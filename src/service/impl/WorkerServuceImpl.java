@@ -17,9 +17,9 @@ public class WorkerServuceImpl implements WorkerService {
     }
 
     @Override
-    public List<Plan> findAll() {
+    public List<Plan> findAll(String id) {
         List<Plan> list = new ArrayList<>();
-        list = planRepository.findAll();
+        list = planRepository.findAll(id);
         return list;
     }
 
